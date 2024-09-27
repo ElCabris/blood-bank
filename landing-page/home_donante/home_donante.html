@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home_donante.css">
+    <title>Página Principal Donantes</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Menú lateral izquierdo -->
+        <div class="menu">
+            <h2>Página Principal Donantes</h2>
+            <ul>
+                <li onclick="loadContent('perfil')">Modificar Perfil</li>
+                <li onclick="toggleSubmenu()">Bandeja de Entrada ▼
+                    <ul class="submenu" id="submenu">
+                        <li onclick="loadContent('chatA')">Chat Banco A</li>
+                        <li onclick="loadContent('chatB')">Chat Banco B</li>
+                    </ul>
+                </li>
+                <li onclick="loadContent('sitios')">Sitios de Donación</li>
+                <li onclick="loadContent('historial')">Historial de Donaciones</li>
+            </ul>
+        </div>
+
+        <!-- Área de contenido derecho -->
+        <div class="content">
+            <h2>Bienvenido</h2>
+            <div id="contentArea" class="message">
+                Aquí que vaya un mensaje o imagen.
+            </div>
+        </div>
+    </div>
+    <script src="home_donante.js"></script>
+</body>
+</html>
