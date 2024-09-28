@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import './App.css';
+import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import RegisterBank from "./pages/RegisterBank";
 import RegisterDonor from "./pages/RegisterDonor";
 import DonationSites from "./pages/DonationSites";
@@ -8,24 +9,45 @@ import Home from './pages/Home';
 
 function App() {
   return (
-		<Router>
-			<nav>
-				<Link to="/">Casa</Link>
-				<Link to="/login">Iniciar Sesión</Link>
-				<Link to="/register-bank">Registrar Banco</Link>
-				<Link to="/register-donor">Registrar Donante</Link>
-			</nav>
+    <Router>
+      <nav className='navbar'>
+        <ul> 
+          <li>
+            <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
+              Casa
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/login" className={({ isActive }) => isActive ? 'active' : ''}>
+              Iniciar Sesión
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/register-bank" className={({ isActive }) => isActive ? 'active' : ''}>
+              Registrar Banco
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/register-donor" className={({ isActive }) => isActive ? 'active' : ''}>
+              Registrar Donante
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
 
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/login" element={<Login />} />
-				<Route path="/register-bank" element={<RegisterBank />} />
-				<Route path="/register-donor" element={<RegisterDonor />} />
-				<Route path="/donation-site" element={<DonationSites />} />
-				<Route path="/donation-history" element={<DonationHistory />} />
-			</Routes>
-		</Router>
+      <div className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register-bank" element={<RegisterBank />} />
+          <Route path="/register-donor" element={<RegisterDonor />} />
+          <Route path="/donation-sites" element={<DonationSites />} />
+          <Route path="/donation-history" element={<DonationHistory />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
 export default App;
+
