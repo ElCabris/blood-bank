@@ -1,5 +1,6 @@
 import {MenuBank} from "../components/Menu";
 import {useState} from "react";
+import AddBatch from "./AddBatch";
 
 function BankHome() {
 	const [activateComponent, setActivateComponent] = useState('edit-profile');
@@ -14,7 +15,7 @@ function BankHome() {
 			case 'statistics':
 				return <h2>Estadísticas</h2>;
 			case 'add batch':
-				return <h2>Add batch</h2>;
+				return <AddBatch />;
 			case 'delete batch':
 				return <h2>Delete batch</h2>;
 			default:
