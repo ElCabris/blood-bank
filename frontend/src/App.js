@@ -2,11 +2,10 @@ import './App.css';
 import {BrowserRouter as Router, Routes, Route, NavLink} from "react-router-dom";
 import RegisterBank from "./pages/RegisterBank";
 import RegisterDonor from "./pages/RegisterDonor";
-import DonationSites from "./pages/DonationSites";
-import DonationHistory from "./pages/DonationHistory";
 import Login from "./pages/Login";
 import Home from './pages/Home';
 import DonorHome from './pages/DonorHome';
+import BankHome from './pages/BankHome';
 
 function App() {
 	return (
@@ -41,6 +40,7 @@ function App() {
 					<Route path="/" element={<Home />} />
 					<Route path="/login" element={<Login />} />
 					<Route path="/donor" element={<DonorHome />} />
+					<Route path="/bank" element={<BankHome />} /> 
 					<Route path="/register/bank" element={<RegisterBank />} />
 					<Route path="/register/donor" element={<RegisterDonor />} />
 				</Routes>
