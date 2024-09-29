@@ -24,12 +24,12 @@ function App() {
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/register-bank" className={({isActive}) => isActive ? 'active' : ''}>
+						<NavLink to="/register/bank" className={({isActive}) => isActive ? 'active' : ''}>
 							Registrar Banco
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/register-donor" className={({isActive}) => isActive ? 'active' : ''}>
+						<NavLink to="/register/donor" className={({isActive}) => isActive ? 'active' : ''}>
 							Registrar Donante
 						</NavLink>
 					</li>
