@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import InputData from "../components/InputData";
+import './Login.css';
 
 function Login() {
   const [user, setUser] = useState("");
@@ -21,9 +22,9 @@ function Login() {
   };
 
   return (
-    <>
+    <div>
       <h1>Iniciar Sesión</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="FormLogin">
         <InputData
           value={user}
           onChange={(e) => setUser(e.target.value)}
@@ -36,15 +37,18 @@ function Login() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Contraseña"
-        >
+        ><br></br>
+        <br></br>
           Contraseña
         </InputData>
+        <br></br>
+        <br></br>
         <button type="submit">Enviar</button>
       </form>
       {showError && (
         <p style={{ color: "red" }}>Usuario o contraseña incorrectos</p>
       )}
-    </>
+    </div>
   );
 }
 
