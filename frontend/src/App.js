@@ -14,7 +14,7 @@ function App() {
 				<ul>
 					<li>
 						<NavLink to="/" className={({isActive}) => isActive ? 'active' : ''}>
-							Casa
+							Inicio
 						</NavLink>
 					</li>
 					<li>
@@ -50,4 +50,3 @@ function App() {
 }
 
 export default App;
-

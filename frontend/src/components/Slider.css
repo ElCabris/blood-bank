@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0; 
+    overflow-x: hidden; /* Evitar el scroll horizontal en la página */
+}
+
+main {
+    overflow: hidden; /* Oculta cualquier overflow fuera del área visible */
+    position: relative;
+}
+
+.slider {
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: calc(100vw * 3);
+    height: 400px;
+    position: relative;
+    box-sizing: border-box;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-item {
+    width: 100vw;    
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    flex-shrink: 0; /* Para que no se encojan las imágenes */
+}
+
+.content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+
+.content h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.title{
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: #CC0000; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+}
+
+.content button {
+    padding: 10px 20px;
+    background-color: #CC0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.content button:hover {
+    background-color: #ff6b81;
+}
+
+.nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.btn {
+    background-color: rgba(255, 255, 255, 0.822);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    color: black;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.prev {
+    margin-left: 10px;
+}
+
+.next {
+    margin-right: 10px;
+}
