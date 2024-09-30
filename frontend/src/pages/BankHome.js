@@ -3,6 +3,7 @@ import {useState} from "react";
 import AddBatch from "./AddBatch";
 import DeleteBatch from "./DeleteBatch";
 import Statistics from "./Statistics";
+import BankEditProfile from "./BankEditProfile";
 
 function BankHome() {
 	const [activateComponent, setActivateComponent] = useState('edit-profile');
@@ -11,7 +12,7 @@ function BankHome() {
 	const renderComponent = () => {
 		switch (activateComponent) {
 			case 'edit-profile':
-				return <h2>edit profile</h2>;
+				return <BankEditProfile />; 
 			case 'request-donor':
 				return <h2>request donor</h2>;
 			case 'statistics':
