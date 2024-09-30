@@ -28,7 +28,7 @@ function DonorEditProfile() {
 			return;
 		}
 	};
-
+	
 	return (
 		<div className='Modify'>
 			<h2>Modificar datos del donante</h2>

@@ -1,4 +1,4 @@
-import MenuDonor from "../components/Menu";
+import MenuDonor from "../components/MenuDonor";
 import DonationHistory from "./DonationHistory";
 import DonationSites from "./DonationSites";
 import DonorEditProfile from "./DonorEditProfile";
