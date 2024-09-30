@@ -28,7 +28,7 @@ env.bak/
 
 # Static files (FastAPI)
 staticfiles/
-media/
+
 
 # Node.js files and directories (React)
 node_modules/
