@@ -5,6 +5,7 @@ import DeleteBatch from "./DeleteBatch";
 import Statistics from "./Statistics";
 import BankEditProfile from "./BankEditProfile";
 import Chat from '../components/Chat';
+import RequestDonor from "../components/RequestDonor";
 
 function BankHome() {
 	const [activateComponent, setActivateComponent] = useState('edit-profile');
@@ -15,7 +16,7 @@ function BankHome() {
 			case 'edit-profile':
 				return <BankEditProfile />; 
 			case 'request-donor':
-				return <h2>request donor</h2>;
+				return <RequestDonor />; 
 			case 'statistics':
 				return <Statistics />; 
 			case 'add batch':
