@@ -1,26 +1,44 @@
 import InputData from "../components/InputData";
 function RegisterDonor() {
 	return (
-		<form>
-			<InputData>Nombres</InputData>
-			<InputData>Apellidos</InputData>
-			<InputData>Fecha de nacimiento</InputData>
-		<select name="gener">
-		<option>Hombre</option>
-		<option>Mujer</option>
-		<option>Elicoptero de batalla</option>
-		</select>
-			<InputData type="number">Teléfono</InputData>
-			<InputData type="email">Correo electrónico</InputData>
-			<InputData type="file">Historial médico*</InputData>
-			<InputData>Grupo sanguíneo</InputData>
-			<InputData>Ciudad / Municipio</InputData>
-			<InputData>Dirección</InputData>
-			<InputData>Usuario</InputData>
-			<InputData type="password">Contraseña</InputData>
-			<InputData type="password">Confirma contraseña</InputData>
-			<button type="submit">Enviar</button>
-		</form>
+		<div>
+			<h1>Registro donante</h1>
+			<form className='Form'>
+				<InputData placeholder='Ingrese los nombres'>Nombres</InputData>
+				<InputData placeholder='Ingrese los apellidos'>Apellidos</InputData>
+				<InputData type='date' placeholder='Ingrese fecha de nacimiento'>Fecha de nacimiento</InputData>
+				<div className="form-group">
+					<label>Género:</label>
+					<select name="gener">
+						<option>Hombre</option>
+						<option>Mujer</option>
+						<option>Otro</option>
+					</select>
+				</div>
+				<InputData type="text" placeholder='Ingrese el número telefónico'>Teléfono</InputData>
+				<InputData type="email" placeholder='Ingrese el correo electrónico'>Correo electrónico</InputData>
+				<InputData type="file">Historial médico</InputData>
+				<div className="form-group">
+					<label>Grupo sanguíneo:</label>
+					<select name="sangre" class='options'>
+						<option>O+</option>
+						<option>O-</option>
+						<option>A+</option>
+						<option>A-</option>
+						<option>B+</option>
+						<option>B-</option>
+						<option>AB+</option>
+						<option>AB-</option>
+					</select>
+				</div>
+				<InputData placeholder='Ingrese ciudad/municipio de residencia'>Ciudad / Municipio</InputData>
+				<InputData placeholder='Ingrese la dirección de residencia'>Dirección</InputData>
+				<InputData placeholder='Ingrese el nuevo usuario'>Usuario</InputData>
+				<InputData type="password" placeholder='Ingrese la contraseña'>Contraseña</InputData>
+				<InputData type="password" placeholder='Confirme la contraseña'>Confirma contraseña</InputData>
+				<button type="submit">Enviar</button>
+			</form>
+		</div>
 	);
 }
 
