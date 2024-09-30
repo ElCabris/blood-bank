@@ -24,11 +24,11 @@ function Login() {
   return (
     <div>
       <h1>Iniciar Sesión</h1>
-      <form onSubmit={handleSubmit} className="FormLogin">
+      <form onSubmit={handleSubmit} className="Form">
         <InputData
           value={user}
           onChange={(e) => setUser(e.target.value)}
-          placeholder="Usuario"
+          placeholder="Ingrese el usuario"
         >
           Usuario
         </InputData>
@@ -36,7 +36,7 @@ function Login() {
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="Contraseña"
+          placeholder="Ingrese la contraseña"
         ><br></br>
         <br></br>
           Contraseña

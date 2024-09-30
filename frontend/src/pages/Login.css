@@ -9,16 +9,25 @@ h1 {
   color: #333;
 }
 
-.FormLogin {
-  text-align: center;
+.Form {
   align-items: flex-start;
   width: 100%;
-  max-width: 400px;
+  max-width: 640px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 form input {
@@ -27,7 +36,6 @@ form input {
   border: 1px solid #ccc;
   border-radius: 5px;
   transition: border-color 0.3s, box-shadow 0.3s;
-  margin-left: 30px;
 }
 
 form button {
