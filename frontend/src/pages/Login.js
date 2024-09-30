@@ -1,15 +1,52 @@
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import InputData from "../components/InputData";
+
 function Login() {
-	return (
-		<>
-		<h1>Iniciar Sesión</h1>
-		<form>
-			<InputData>Usuario</InputData>
-			<InputData>Contraseña</InputData>
-		</form>
-		<button>Enviar</button>
-	</>
-	);
+  const [user, setUser] = useState("");
+  const [password, setPassword] = useState(""); // Estado para la contraseña
+  const [showError, setShowError] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+
+    if (user === "donor" && password === "donorpass") {
+      navigate("/donor");
+    } else if (user === "bank" && password === "bankpass") {
+      navigate("/bank");
+    } else {
+      setShowError(true);
+    }
+  };
+
+  return (
+    <>
+      <h1>Iniciar Sesión</h1>
+      <form onSubmit={handleSubmit}>
+        <InputData
+          value={user}
+          onChange={(e) => setUser(e.target.value)}
+          placeholder="Usuario"
+        >
+          Usuario
+        </InputData>
+        <InputData
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Contraseña"
+        >
+          Contraseña
+        </InputData>
+        <button type="submit">Enviar</button>
+      </form>
+      {showError && (
+        <p style={{ color: "red" }}>Usuario o contraseña incorrectos</p>
+      )}
+    </>
+  );
 }
 
 export default Login;
+
