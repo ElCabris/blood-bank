@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-//import './mystyles.css';
+import InputData from "../components/InputData";
+import './DonorEditProfile.css';
 
 function DonorEditProfile() {
 	// Estados para los datos del usuario
@@ -29,71 +30,18 @@ function DonorEditProfile() {
 	};
 
 	return (
-		<div style={{margin: '20px', padding: '80px', maxWidth: '400px', border: '1px solid #ccc', borderRadius: '10px'}}>
+		<div className='Modify'>
 			<h2>Modificar datos del donante</h2>
-			<form onSubmit={handleSubmit}>
-
-				<label>Teléfono de contacto:</label>
-				<input
-					type="text"
-					value={telefono}
-					onChange={(e) => setTelefono(e.target.value)}
-					style={{display: 'block', marginBottom: '10px', width: '100%'}}
-				/>
-
-				<label>Correo electrónico:</label>
-				<input
-					type="email"
-					value={correo}
-					onChange={(e) => setCorreo(e.target.value)}
-					style={{display: 'block', marginBottom: '10px', width: '100%'}}
-				/>
-
-				<label>Ciudad / Municipio:</label>
-				<select
-					name="ciudad"
-					value={ciudad}
-					onChange={(e) => setCiudad(e.target.value)}
-					style={{display: 'block', marginBottom: '10px', width: '100%'}}
-				>
-					<option value="">Selecciona tu ciudad</option>
-					<option value="Ciudad1">Ciudad 1</option>
-					<option value="Ciudad2">Ciudad 2</option>
-				</select>
-
-				<label>Dirección:</label>
-				<input
-					type="text"
-					value={direccion}
-					onChange={(e) => setDireccion(e.target.value)}
-					style={{display: 'block', marginBottom: '10px', width: '100%'}}
-				/>
-
-				<label>Contraseña antigua:</label>
-				<input
-					type="password"
-					value={oldPassword}
-					onChange={(e) => setOldPassword(e.target.value)}
-					style={{display: 'block', marginBottom: '10px', width: '100%'}}
-				/>
-
-				<label>Nueva contraseña:</label>
-				<input
-					type="password"
-					value={newPassword}
-					onChange={(e) => setNewPassword(e.target.value)}
-					style={{display: 'block', marginBottom: '10px', width: '100%'}}
-				/>
-
-				<label>Confirmar nueva contraseña:</label>
-				<input
-					type="password"
-					value={confirmNewPassword}
-					onChange={(e) => setConfirmNewPassword(e.target.value)}
-					style={{display: 'block', marginBottom: '10px', width: '100%'}}
-				/>
-
-				<button type="submit" style={{marginTop: '20px'}}>Guardar cambios</button>
+			<h3>*Solo ingrese los datos que desea modificar</h3>
+			<form onSubmit={handleSubmit} className='Form'>
+				<InputData type="text" placeholder='Ingrese el nuevo número telefónico'>Teléfono</InputData>
+				<InputData type="email" placeholder='Ingrese el nuevo correo electrónico'>Correo electrónico</InputData>
+				<InputData placeholder='Ingrese nueva ciudad/municipio de residencia'>Ciudad / Municipio</InputData>
+				<InputData placeholder='Ingrese la nueva dirección de residencia'>Dirección</InputData>
+				<InputData type="password" placeholder='Ingrese la contraseña antigua'>Contraseña antigua</InputData>
+				<InputData type="password" placeholder='Ingrese la contraseña nueva'>Contraseña</InputData>
+				<InputData type="password" placeholder='Confirme la contraseña nueva'>Confirma contraseña</InputData>
+				<button type="submit">Enviar</button>
 			</form>
 		</div>
 	);

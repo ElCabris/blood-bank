@@ -1,0 +1,12 @@
+.navbar-users {
+    color: #CC0000;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 1.2rem 0rem; /* Ajusta el padding para una mejor apariencia */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+}
