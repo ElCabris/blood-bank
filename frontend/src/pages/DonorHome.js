@@ -11,7 +11,7 @@ function DonorHome() {
 	const renderComponent = () => {
 		switch (activeComponent) {
 			case 'edit-profile':
-				return <DonorEditProfile />;
+				;return <DonorEditProfile />;
 			case 'donation-sites':
 				return <DonationSites />;
 			case 'donation-history':
