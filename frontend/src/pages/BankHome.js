@@ -4,6 +4,7 @@ import AddBatch from "./AddBatch";
 import DeleteBatch from "./DeleteBatch";
 import Statistics from "./Statistics";
 import BankEditProfile from "./BankEditProfile";
+import Chat from '../components/Chat';
 
 function BankHome() {
 	const [activateComponent, setActivateComponent] = useState('edit-profile');
@@ -21,6 +22,8 @@ function BankHome() {
 				return <AddBatch />;
 			case 'delete batch':
 				return <DeleteBatch />; 
+			case 'chat':
+				return <Chat />;
 			default:
 				return <h2>Error</h2>;
 		}
