@@ -1,4 +1,4 @@
-import {MenuBank} from "../components/Menu";
+import MenuBank from "../components/MenuBank";
 import {useState} from "react";
 import AddBatch from "./AddBatch";
 import DeleteBatch from "./DeleteBatch";

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-//import './mystyles.css';
+import InputData from "../components/InputData";
+import './BankEditProfile.css';
 
 function BankEditProfile() {
   const [formData, setFormData] = useState({
@@ -33,89 +34,21 @@ function BankEditProfile() {
     }
 
     console.log('Datos modificados:', formData);
-    // Aquí puedes manejar el envío de los datos para modificar el usuario
   };
 
   return (
-    <div style={{ margin: '20px', padding: '80px', maxWidth: '400px', border: '1px solid #ccc', borderRadius: '10px' }}>
+    <div className='Modify'>
       <h2>Modificar información del banco</h2>
-      <form onSubmit={handleSubmit}>
-        <label>Correo electrónico:</label>
-        <input 
-          type="email" 
-          name="email" 
-          value={formData.email} 
-          onChange={handleChange} 
-          style={{ display: 'block', marginBottom: '10px', width: '100%' }} 
-        />
-
-        <label>Teléfono de contacto:</label>
-        <input 
-          type="tel" 
-          name="telefono" 
-          value={formData.telefono} 
-          onChange={handleChange} 
-          style={{ display: 'block', marginBottom: '10px', width: '100%' }} 
-        />
-
-        <label>Ciudad / municipio:</label>
-        <select 
-          name="ciudad" 
-          value={formData.ciudad} 
-          onChange={handleChange} 
-          style={{ display: 'block', marginBottom: '10px', width: '100%' }}
-        >
-          <option value="">Selecciona tu ciudad</option>
-          <option value="Ciudad1">Ciudad 1</option>
-          <option value="Ciudad2">Ciudad 2</option>
-        </select>
-
-        <label>Dirección:</label>
-        <input 
-          type="text" 
-          name="direccion" 
-          value={formData.direccion} 
-          onChange={handleChange} 
-          style={{ display: 'block', marginBottom: '10px', width: '100%' }} 
-        />
-
-        <label>Usuario:</label>
-        <input 
-          type="text" 
-          name="usuario" 
-          value={formData.usuario} 
-          onChange={handleChange} 
-          style={{ display: 'block', marginBottom: '10px', width: '100%' }} 
-        />
-
-        <label>Contraseña actual:</label>
-        <input 
-          type="password" 
-          name="contrasenaActual" 
-          value={formData.contrasenaActual} 
-          onChange={handleChange} 
-          style={{ display: 'block', marginBottom: '10px', width: '100%' }} 
-        />
-
-        <label>Nueva contraseña:</label>
-        <input 
-          type="password" 
-          name="nuevaContrasena" 
-          value={formData.nuevaContrasena} 
-          onChange={handleChange} 
-          style={{ display: 'block', marginBottom: '10px', width: '100%' }} 
-        />
-
-        <label>Confirmar nueva contraseña:</label>
-        <input 
-          type="password" 
-          name="confirmarNuevaContrasena" 
-          value={formData.confirmarNuevaContrasena} 
-          onChange={handleChange} 
-          style={{ display: 'block', marginBottom: '10px', width: '100%' }} 
-        />
-
-        <button type="submit" style={{ marginTop: '20px' }}>Modificar</button>
+      <h3>*Solo ingrese los datos que desea modificar</h3>
+      <form onSubmit={handleSubmit} className='Form'>
+        <InputData type="text" placeholder='Ingrese el nuevo número telefónico'>Teléfono</InputData>
+        <InputData type="email" placeholder='Ingrese el nuevo correo electrónico'>Correo electrónico</InputData>
+        <InputData placeholder='Ingrese nueva ciudad/municipio de residencia'>Ciudad / Municipio</InputData>
+        <InputData placeholder='Ingrese la nueva dirección de residencia'>Dirección</InputData>
+				<InputData type="password" placeholder='Ingrese la contraseña antigua'>Contraseña antigua</InputData>
+				<InputData type="password" placeholder='Ingrese la contraseña nueva'>Contraseña</InputData>
+				<InputData type="password" placeholder='Confirme la contraseña nueva'>Confirma contraseña</InputData>
+				<button type="submit">Enviar</button>
       </form>
     </div>
   );
