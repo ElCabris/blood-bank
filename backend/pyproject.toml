@@ -1,0 +1,20 @@
+[tool.black]
+line-length = 88
+target-version = ['py39']
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | build
+  | dist
+  | migrations
+)/
+'''
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+python_version = 3.9
+strict = true
+
