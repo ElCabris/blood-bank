@@ -19,6 +19,8 @@ function DonorEditProfile() {
 	const [newPassword, setNewPassword] = useState('');
 	const [confirmNewPassword, setConfirmNewPassword] = useState(''); * */
 	// Función para manejar el envío del formulario
+	var newPassword = "";
+	var confirmNewPassword = "";
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
