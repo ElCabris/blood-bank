@@ -4,7 +4,7 @@ import './DonorEditProfile.css';
 
 function DonorEditProfile() {
 	// Estados para los datos del usuario
-	const [nombres, setNombres] = useState('');
+/*	const [nombres, setNombres] = useState('');
 	const [apellidos, setApellidos] = useState('');
 	const [fechaNacimiento, setFechaNacimiento] = useState('');
 	const [genero, setGenero] = useState('');
@@ -17,8 +17,7 @@ function DonorEditProfile() {
 	// Estados para el cambio de contraseña
 	const [oldPassword, setOldPassword] = useState('');
 	const [newPassword, setNewPassword] = useState('');
-	const [confirmNewPassword, setConfirmNewPassword] = useState('');
-
+	const [confirmNewPassword, setConfirmNewPassword] = useState(''); * */
 	// Función para manejar el envío del formulario
 	const handleSubmit = (e) => {
 		e.preventDefault();
