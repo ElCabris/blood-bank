@@ -1,23 +1,23 @@
-import React, {useState} from 'react';
+// import React, {useState} from 'react';
 import InputData from "../components/InputData";
 import './DonorEditProfile.css';
 
 function DonorEditProfile() {
 	// Estados para los datos del usuario
-/*	const [nombres, setNombres] = useState('');
-	const [apellidos, setApellidos] = useState('');
-	const [fechaNacimiento, setFechaNacimiento] = useState('');
-	const [genero, setGenero] = useState('');
-	const [telefono, setTelefono] = useState('');
-	const [correo, setCorreo] = useState('');
-	const [grupoSanguineo, setGrupoSanguineo] = useState('');
-	const [ciudad, setCiudad] = useState('');
-	const [direccion, setDireccion] = useState('');
-
-	// Estados para el cambio de contraseña
-	const [oldPassword, setOldPassword] = useState('');
-	const [newPassword, setNewPassword] = useState('');
-	const [confirmNewPassword, setConfirmNewPassword] = useState(''); * */
+	/*	const [nombres, setNombres] = useState('');
+		const [apellidos, setApellidos] = useState('');
+		const [fechaNacimiento, setFechaNacimiento] = useState('');
+		const [genero, setGenero] = useState('');
+		const [telefono, setTelefono] = useState('');
+		const [correo, setCorreo] = useState('');
+		const [grupoSanguineo, setGrupoSanguineo] = useState('');
+		const [ciudad, setCiudad] = useState('');
+		const [direccion, setDireccion] = useState('');
+	
+		// Estados para el cambio de contraseña
+		const [oldPassword, setOldPassword] = useState('');
+		const [newPassword, setNewPassword] = useState('');
+		const [confirmNewPassword, setConfirmNewPassword] = useState(''); * */
 	// Función para manejar el envío del formulario
 	var newPassword = "";
 	var confirmNewPassword = "";
@@ -29,7 +29,7 @@ function DonorEditProfile() {
 			return;
 		}
 	};
-	
+
 	return (
 		<div className='Modify'>
 			<h2>Modificar datos del donante</h2>
