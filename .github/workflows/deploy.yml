@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # Change this if your default branch is different
+      - main # Cambia esto si tu rama principal es diferente
 
 jobs:
   deploy:
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "18" # Specify your Node.js version here
+          node-version: "18" # Especifica tu versión de Node.js aquí
 
       - name: Install dependencies
         run: |
@@ -28,9 +28,15 @@ jobs:
           cd frontend
           npm run build
 
+      - name: Configure Git
+        run: |
+          git config --global user.name "Emanuel Cabrera Novoa"
+          git config --global user.email "emanuelcabreranovoa@hotmail.com"
+
       - name: Deploy to GitHub Pages
         run: |
           cd frontend
           npm run deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
