@@ -19,6 +19,8 @@ function DonorHome() {
 				return <DonationSites />;
 			case 'donation-history':
 				return <DonationHistory />;
+			default:
+				return <div>Component dont found</div>;
 		}
 	};
 	return (

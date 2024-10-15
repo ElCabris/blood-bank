@@ -2,7 +2,6 @@ import Slider from 'react-slick';
 import './DonationSites.css';
 
 const DonationSites = () => {
-	{/* datos ficticios*/}
 	const bloodBanks = [
 		{id: 1, name: 'Banco de Sangre A', city: 'Medellín', address: 'Calle 10 #23-45'},
 		{id: 2, name: 'Banco de Sangre B', city: 'Bogotá', address: 'Carrera 7 #15-20'},
