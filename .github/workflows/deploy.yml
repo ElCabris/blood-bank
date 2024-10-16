@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # Cambia esto si tu rama principal es diferente
+      - main
 
 jobs:
   deploy:
@@ -11,12 +11,14 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: "18" # Especifica tu versión de Node.js aquí
+          node-version: "18"
 
       - name: Install dependencies
         run: |
@@ -36,7 +38,7 @@ jobs:
       - name: Deploy to GitHub Pages
         run: |
           cd frontend
-          npm run deploy
+          npx gh-pages -d build -r https://$GH_TOKEN@github.com/ElCabris/blood-bank.git
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
