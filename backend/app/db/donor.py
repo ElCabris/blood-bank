@@ -2,7 +2,6 @@ from sqlalchemy import Column, Integer, String, Enum, Date, ForeignKey
 from data import Base
 import enum
 
-__tablename__: str = "Donor"
 
 class GenderEnum(enum.Enum):
     FEMALE = "FEMALE"
@@ -23,6 +22,7 @@ class StateEnum(enum.Enum):
     DISABLED = 'DISABLED'
 
 class Donor(Base):
+    __tablename__: str = "Donor"
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
     last_name = Column(String)
