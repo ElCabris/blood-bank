@@ -7,4 +7,4 @@ class DonationSide(Base):
     
     id = Column(Integer, primary_key=True) 
     bank = Column(Integer, ForeignKey('Bank.id'))
-    direction = Column(String)
+    address = Column(String)
