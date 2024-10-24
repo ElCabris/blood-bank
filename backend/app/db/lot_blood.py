@@ -8,8 +8,9 @@ class TypeDonation(enum.Enum):
     RED_BLOOD_CELL = 2
 
 class LoteBlood(Base):
+    __tablename__: str = "LotBlood"
 
     id = Column(Integer, primary_key=True)
-    date = Column(Date)
-    liters = Column(Float)
+    date = Column(Date, nullable=False)
+    liters = Column(Float, nullable=False)
     bank = Column(Integer, ForeignKey('Bank.id'))
