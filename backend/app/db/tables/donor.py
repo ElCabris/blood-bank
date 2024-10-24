@@ -1,6 +1,6 @@
-from sqlalchemy import Column, Integer, String, Enum, Date, ForeignKey
-from data import Base
 import enum
+from sqlalchemy import Column, Integer, String, Enum, Date, ForeignKey
+from app.db.data import Base
 
 
 class GenderEnum(enum.Enum):
@@ -37,4 +37,3 @@ class Donor(Base):
     user = Column(String, nullable=False, unique=True)
     password = Column(String, nullable=False)
     state = Column(Enum(StateEnum), nullable=False)
-

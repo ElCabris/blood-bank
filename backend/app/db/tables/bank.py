@@ -1,5 +1,5 @@
-from data import Base
 from sqlalchemy import Column, Integer, String
+from app.db.data import Base
 
 class Bank(Base):
 

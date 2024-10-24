@@ -1,8 +1,8 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 
-url_data = "sqlite:///./data"
-engine = create_engine(url_data)
+URL_DATA = "sqlite:///./data"
+engine = create_engine(URL_DATA)
 
 # declarative base
 Base = declarative_base()

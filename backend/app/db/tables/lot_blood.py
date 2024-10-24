@@ -1,6 +1,6 @@
-from data import Base
-from sqlalchemy import Integer, Column, Date, Float, ForeignKey
 import enum
+from sqlalchemy import Integer, Column, Date, Float, ForeignKey
+from app.db.data import Base
 
 class TypeDonation(enum.Enum):
     PLATELETS = 0
