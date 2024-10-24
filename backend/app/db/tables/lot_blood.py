@@ -7,7 +7,7 @@ class TypeDonation(enum.Enum):
     STEM_CELLS = 1
     RED_BLOOD_CELL = 2
 
-class LoteBlood(Base):
+class LotBlood(Base):
     __tablename__: str = "LotBlood"
 
     id = Column(Integer, primary_key=True)
