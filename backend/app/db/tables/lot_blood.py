@@ -14,3 +14,4 @@ class LotBlood(Base):
     date = Column(Date, nullable=False)
     liters = Column(Float, nullable=False)
     bank = Column(Integer, ForeignKey('Bank.id'))
+    donor_id = Column(Integer, ForeignKey('Donor.id'))
