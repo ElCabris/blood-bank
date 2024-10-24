@@ -1,4 +1,3 @@
-from sqlalchemy.sql.elements import CollationClause
 from data import Base
 from sqlalchemy import Column, Integer, String
 
@@ -13,4 +12,3 @@ class Bank(Base):
     email = Column(String, nullable=False)
     city = Column(String)
     password = Column(String, nullable=False)
-
