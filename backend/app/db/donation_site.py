@@ -1,9 +1,9 @@
 from data import Base
 from sqlalchemy import Column, Integer, String, ForeignKey
 
-class DonationSide(Base):
+class DonationSite(Base):
 
-    __tablename__ = "DonationSide"
+    __tablename__ = "DonationSite"
     
     id = Column(Integer, primary_key=True) 
     bank = Column(Integer, ForeignKey('Bank.id'))
