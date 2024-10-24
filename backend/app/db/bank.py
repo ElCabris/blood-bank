@@ -1,5 +1,5 @@
 from sqlalchemy.sql.elements import CollationClause
-from app.db.data import Base
+from data import Base
 from sqlalchemy import Column, Integer, String
 
 class Bank(Base):
