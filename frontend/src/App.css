@@ -52,13 +52,13 @@
     height: auto; /* Ajusta la altura para contenido variable */
   }
 
-  .navbar ul {
+  .navbar_modif ul {
     flex-direction: column;
     gap: 10px;
     width: 100vw;
   }
 
-  .navbar ul li a {
+  .navbar_modif ul li a {
     display: block;
     width: 100vw;
   }
