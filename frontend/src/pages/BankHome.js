@@ -29,6 +29,7 @@ function BankHome() {
 				return <h2>Error</h2>;
 		}
 	};
+	
 	return (
 		<>
 			<div>
