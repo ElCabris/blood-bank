@@ -28,10 +28,6 @@ def add_lot_blood(date: Date, liters: float, bank_name: str, donor: int) -> Opti
         else:
             raise ValueError("not found donor")
 
-    print('--------------')
-    print(type(donor_id))
-    print('------------------')
-
     with Session(engine) as session:
         try:
             lot_blood = LotBlood(date=date, liters=liters, bank_id=bank_id, donor_id=donor_id)
