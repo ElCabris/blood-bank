@@ -1,5 +1,7 @@
 from typing import Optional
+
 from pydantic import BaseModel
+
 
 class Bank(BaseModel):
 
@@ -9,4 +11,4 @@ class Bank(BaseModel):
     email: str
     password: str
     phone_number: Optional[str]
-    city: Optional[str] 
+    city: Optional[str]

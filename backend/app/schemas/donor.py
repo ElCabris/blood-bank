@@ -1,8 +1,10 @@
 from datetime import date
+from typing import Optional
 
 from pydantic import BaseModel
 
-from app.db.tables.donor import GenderEnum, BloodTypeEnum, StateEnum
+from app.db.tables.donor import BloodTypeEnum, GenderEnum, StateEnum
+
 
 class Donor(BaseModel):
     id: int
@@ -15,7 +17,7 @@ class Donor(BaseModel):
     user: str
     password: str
     state: StateEnum
-    last_name: str
-    phone: str
-    city: str
-    medical_history_id: int
+    last_name: Optional[str]
+    phone: Optional[str]
+    city: Optional[str]
+    medical_history_id: Optional[int]
