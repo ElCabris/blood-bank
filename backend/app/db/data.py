@@ -1,25 +1,8 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import declarative_base, sessionmaker
+from sqlalchemy.orm import declarative_base
 
 URL_DATA = "sqlite:///./data.db"
-engine = create_engine(URL_DATA)
+engine = create_engine(URL_DATA, echo=True)
 
-# declarative base
+# Declarative base
 Base = declarative_base()
-
-Session = sessionmaker(engine)
-
-
-def db_session(func):
-    def wrapper(*args, **kargs):
-        session = Session()
-
-        try:
-            result = func(session, *args, **kargs)
-            session.commit()
-            return result
-        except Exception as e:
-            print(e)
-        finally:
-            session.close()
-    return wrapper
