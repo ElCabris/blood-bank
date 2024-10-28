@@ -7,7 +7,7 @@ import Login from "./pages/Login";
 import Home from './pages/Home';
 import DonorHome from './pages/DonorHome';
 import BankHome from './pages/BankHome';
-
+import HealthForm from './pages/healtforms';
 function Navbar() {
   return (
     <nav className='navbar'>
@@ -70,6 +70,7 @@ function App() {
           <Route path="/bank" element={<BankHome />} />
           <Route path="/register/bank" element={<RegisterBank />} />
           <Route path="/register/donor" element={<RegisterDonor />} />
+          <Route path="/healtforms" element={<HealthForm />} />
         </Routes>
       </div>
     </div>
