@@ -1,6 +1,7 @@
 import enum
 
 from sqlalchemy import Column, Date, Float, ForeignKey, Integer
+from sqlalchemy.orm import relationship
 
 from app.db.data import Base
 
@@ -17,5 +18,8 @@ class LotBlood(Base):
     id = Column(Integer, primary_key=True)
     date = Column(Date, nullable=False)
     liters = Column(Float, nullable=False)
-    bank = Column(Integer, ForeignKey("banks.id"), nullable=False)
+    bank_id = Column(Integer, ForeignKey("banks.id"), nullable=False)
     donor_id = Column(Integer, ForeignKey("donors.id"), nullable=False)
+
+    banks = relationship("Bank")
+    donors = relationship("Donor")
