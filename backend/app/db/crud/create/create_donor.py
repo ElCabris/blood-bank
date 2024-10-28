@@ -1,13 +1,13 @@
 import re
-from typing import Optional
 from datetime import date
+from typing import Optional
 
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
-from app.db.tables.donor import Donor, GenderEnum, BloodTypeEnum, StateEnum
-from app.db.data import engine
 from app.db.crud.create.create_medical_history import add_medical_history
+from app.db.data import engine
+from app.db.tables.donor import BloodTypeEnum, Donor, GenderEnum, StateEnum
 
 
 def is_email(email: str) -> bool:

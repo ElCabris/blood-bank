@@ -1,8 +1,10 @@
 from typing import Optional
+
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
-from app.db.tables.medical_history import MedicalHistory
+
 from app.db.data import engine
+from app.db.tables.medical_history import MedicalHistory
 
 
 def add_medical_history(path: str) -> Optional[int]:
