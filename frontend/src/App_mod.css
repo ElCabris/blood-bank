@@ -1,0 +1,65 @@
+.navbar_modif{
+    width: 100%;
+    background-color: #CC0000; /* Rojo principal */
+    display: flex;
+    justify-content: flex-end; /* Alinea los elementos al inicio */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 0.5rem 1rem; /* Ajusta el padding para una mejor apariencia */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px; /* Define una altura fija */
+}
+
+.navbar_modif ul {
+    list-style: none;
+    display: flex;
+    gap: 40px; /* Espacio entre los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.navbar_modif ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: text-decoration 0.3s;
+    white-space: nowrap; /* Evita que el texto se envuelva si no es necesario */
+    margin-right: 40px;
+}
+
+.navbar ul li a:hover{
+    background-color: #ff6b81;
+    padding: 0.5rem; 
+    box-shadow: 0 2px 4px;
+    border-radius: 8%;
+}
+
+.navbar_modif ul li a.active {
+    text-decoration: underline;
+}
+
+.main-content {
+    margin-top: 60px; /* Igual a la altura del navbar para evitar superposición */
+    padding: 1rem; /* Opcional: Añade padding para el contenido */
+}
+
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0.5rem;
+      height: auto; /* Ajusta la altura para contenido variable */
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      gap: 10px;
+      width: 100vw;
+    }
+  
+    .navbar ul li a {
+      display: block;
+      width: 100vw;
+    }
+  }
