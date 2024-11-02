@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import InputData from "../components/InputData";
+import './Login_2.css';
 
 function RegisterDonor() {
 	const [uploadMedicalHistory, setUploadMedicalHistory] = useState(null);
