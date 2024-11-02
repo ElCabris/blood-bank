@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import InputData from "../components/InputData";
 import './Login.css';
 
 const Login = () => {
@@ -62,7 +61,7 @@ const Login = () => {
             <label>
               <input type="checkbox" /> Recordarme
             </label>
-            <a href="#"> Olvidé mi contraseña</a>
+            <a href="/"> Olvidé mi contraseña</a>
           </div>
 
           {/* Botón para enviar el formulario */}
@@ -70,11 +69,11 @@ const Login = () => {
 
           {/* Enlace para registro de nuevos usuarios */}
           <div className="register-link">
-            <p> ¿No tienes una cuenta como banco? <a onClick={() => navigate("/register/bank")}>Regístrate como banco</a></p>
+            <p> ¿No tienes una cuenta como banco? <strong onClick={() => navigate("/register/bank")}>Regístrate como banco</strong></p>
           </div>
 
           <div className="register-link">
-            <p> ¿No tienes una cuenta como donante? <a onClick={() => navigate("/register/donor")}>Regístrate como donante</a></p>
+            <p> ¿No tienes una cuenta como donante? <strong onClick={() => navigate("/register/donor")}>Regístrate como donante</strong></p>
           </div>
         
         
