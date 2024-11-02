@@ -1,5 +1,5 @@
 import InputData from "../components/InputData";
-
+import './Login_2.css';
 function RegisterBank() {
 	return (
 		<div>

@@ -3,54 +3,91 @@ import { useNavigate } from "react-router-dom";
 import InputData from "../components/InputData";
 import './Login.css';
 
-function Login() {
+const Login = () => {
+  // Estado para almacenar el nombre de usuario y la contraseña
   const [user, setUser] = useState("");
-  const [password, setPassword] = useState(""); // Estado para la contraseña
+  const [password, setPassword] = useState("");
+  
+  // Estado para mostrar un mensaje de error si el login falla
   const [showError, setShowError] = useState(false);
+  
+  // Hook para navegar a diferentes rutas
   const navigate = useNavigate();
 
+  // Función para manejar el envío del formulario
   const handleSubmit = (e) => {
-    e.preventDefault(); 
+    e.preventDefault(); // Evita que la página se recargue
 
+    // Validación de usuario y contraseña
     if (user === "donor" && password === "donorpass") {
-      navigate("/donor");
+      navigate("/donor"); // Navega a la página de donantes
     } else if (user === "bank" && password === "bankpass") {
-      navigate("/bank");
+      navigate("/bank"); // Navega a la página del banco
     } else {
-      setShowError(true);
+      setShowError(true); // Muestra un mensaje de error si la validación falla
     }
   };
 
   return (
-    <div>
-      <h1>Iniciar Sesión</h1>
-      <form onSubmit={handleSubmit} className="Form">
-        <InputData
-          value={user}
-          onChange={(e) => setUser(e.target.value)}
-          placeholder="Ingrese el usuario"
-        >
-          Usuario
-        </InputData>
-        <InputData
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Ingrese la contraseña"
-        ><br></br>
-        <br></br>
-          Contraseña
-        </InputData>
-        <br></br>
-        <br></br>
-        <button type="submit">Enviar</button>
-      </form>
-      {showError && (
-        <p style={{ color: "red" }}>Usuario o contraseña incorrectos</p>
-      )}
+    <div className="pagina-login">
+      <div className="wrapper">
+        {/* Formulario de inicio de sesión */}
+        <form onSubmit={handleSubmit}>
+          <h1>INICIO DE SECCIÓN</h1>
+          
+          {/* Entrada para el nombre de usuario */}
+          <div className="input-box">
+            <input 
+              type="text" 
+              placeholder="Nombre de usuario" 
+              value={user}
+              onChange={(e) => setUser(e.target.value)}
+              required 
+            />
+          </div>
+
+          {/* Entrada para la contraseña */}
+          <div className="input-box">
+            <input 
+              type="password" 
+              value={password} 
+              placeholder="Contraseña" 
+              onChange={(e) => setPassword(e.target.value)}
+              required 
+            />
+          </div>
+
+          {/* Opción de recordar sesión y enlace de "Olvidé mi contraseña" */}
+          <div className="remember-forgot">
+            <label>
+              <input type="checkbox" /> Recordarme
+            </label>
+            <a href="#"> Olvidé mi contraseña</a>
+          </div>
+
+          {/* Botón para enviar el formulario */}
+          <button type="submit">Entrar</button>
+
+          {/* Enlace para registro de nuevos usuarios */}
+          <div className="register-link">
+            <p> ¿No tienes una cuenta como banco? <a onClick={() => navigate("/register/bank")}>Regístrate como banco</a></p>
+          </div>
+
+          <div className="register-link">
+            <p> ¿No tienes una cuenta como donante? <a onClick={() => navigate("/register/donor")}>Regístrate como donante</a></p>
+          </div>
+        
+        
+        </form>
+
+        {/* Mensaje de error para usuario o contraseña incorrectos */}
+        {showError && (
+          <p style={{ color: "red" }}>Usuario o contraseña incorrectos</p>
+        )}
+      </div>
     </div>
   );
-}
+};
 
 export default Login;
 
