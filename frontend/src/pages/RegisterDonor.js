@@ -16,26 +16,28 @@ function RegisterDonor() {
 	};
 
 	return (
-		<div>
+		<div className="register-container">
 			<h1>Registro donante</h1>
 			<form className='Form'>
-				<InputData placeholder='Ingrese los nombres'>Nombres</InputData>
-				<InputData placeholder='Ingrese los apellidos'>Apellidos</InputData>
-				<InputData type='date' placeholder='Ingrese fecha de nacimiento'>Fecha de nacimiento</InputData>
+				<InputData className="input-container" placeholder='Ingrese los nombres'>Nombres</InputData>
+				<InputData className="input-container" placeholder='Ingrese los apellidos'>Apellidos</InputData>
+				<InputData className="input-container" type='date' placeholder='Ingrese fecha de nacimiento'>Fecha de nacimiento</InputData>
+				
 				<div className="form-group">
 					<label>Género:</label>
-					<select name="gener">
+					<select name="gener" className="input-container">
 						<option>Hombre</option>
 						<option>Mujer</option>
 						<option>Otro</option>
 					</select>
 				</div>
-				<InputData type="text" placeholder='Ingrese el número telefónico'>Teléfono</InputData>
-				<InputData type="email" placeholder='Ingrese el correo electrónico'>Correo electrónico</InputData>
+				
+				<InputData className="input-container" type="text" placeholder='Ingrese el número telefónico'>Teléfono</InputData>
+				<InputData className="input-container" type="email" placeholder='Ingrese el correo electrónico'>Correo electrónico</InputData>
 
 				<div className="form-group">
 					<label>¿Deseas subir tu historial médico?</label>
-					<select onChange={handleMedicalHistoryChange}>
+					<select className="input-container" onChange={handleMedicalHistoryChange}>
 						<option value="">Selecciona una opción</option>
 						<option value="yes">Sí</option>
 						<option value="no">No</option>
@@ -43,12 +45,12 @@ function RegisterDonor() {
 				</div>
 
 				{uploadMedicalHistory === "yes" && (
-					<InputData type="file">Historial médico</InputData>
+					<InputData className="input-container" type="file">Historial médico</InputData>
 				)}
 
 				<div className="form-group">
 					<label>Grupo sanguíneo:</label>
-					<select name="sangre" className='options'>
+					<select name="sangre" className="input-container">
 						<option>O+</option>
 						<option>O-</option>
 						<option>A+</option>
@@ -60,16 +62,16 @@ function RegisterDonor() {
 					</select>
 				</div>
 				
-				<InputData placeholder='Ingrese ciudad/municipio de residencia'>Ciudad / Municipio</InputData>
-				<InputData placeholder='Ingrese la dirección de residencia'>Dirección</InputData>
-				<InputData placeholder='Ingrese el nuevo usuario'>Usuario</InputData>
-				<InputData type="password" placeholder='Ingrese la contraseña'>Contraseña</InputData>
-				<InputData type="password" placeholder='Confirme la contraseña'>Confirma contraseña</InputData>
-				<button type="submit">Enviar</button>
+				<InputData className="input-container" placeholder='Ingrese ciudad/municipio de residencia'>Ciudad / Municipio</InputData>
+				<InputData className="input-container" placeholder='Ingrese la dirección de residencia'>Dirección</InputData>
+				<InputData className="input-container" placeholder='Ingrese el nuevo usuario'>Usuario</InputData>
+				<InputData className="input-container" type="password" placeholder='Ingrese la contraseña'>Contraseña</InputData>
+				<InputData className="input-container" type="password" placeholder='Confirme la contraseña'>Confirma contraseña</InputData>
+				
+				<button className="register-button" type="submit">Enviar</button>
 			</form>
 		</div>
 	);
 }
 
 export default RegisterDonor;
-
