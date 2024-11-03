@@ -32,7 +32,7 @@ const Login = () => {
       <div className="wrapper">
         {/* Formulario de inicio de sesión */}
         <form onSubmit={handleSubmit}>
-          <h1>INICIO DE SECCIÓN</h1>
+          <h1>INICIO DE SESIÓN</h1>
           
           {/* Entrada para el nombre de usuario */}
           <div className="input-box">

@@ -12,6 +12,10 @@ function Navbar() {
   return (
     <nav className='navbar'>
       <ul>
+      <li>
+          <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
+          </NavLink>
+        </li>
         <li>
           <NavLink to="/blood-bank" className={({ isActive }) => isActive ? 'active' : ''}>
             Inicio
@@ -55,7 +59,7 @@ function App() {
   const location = useLocation();
 
   // Lista de rutas donde quieres mostrar el navbar
-  const routesWithNavbar = ['/blood-bank', '/login', '/register/bank', '/register/donor'];
+  const routesWithNavbar = ['/','/blood-bank', '/login', '/register/bank', '/register/donor'];
 
   return (
     <div>
@@ -64,6 +68,7 @@ function App() {
 
       <div className="main-content">
         <Routes>
+        <Route path="/" element={<Home />} />
           <Route path="/blood-bank" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/donor" element={<DonorHome />} />
