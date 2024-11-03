@@ -1,10 +1,10 @@
-function InputData({children, type = 'text', ...rest}) {
+function InputData({ type = "text", placeholder, children, className }) {
 	return (
-		<div className="form-group">
-			<label htmlFor={children}>{children}</label>
-			<input {...rest} id={children} type={type}/>
+		<div className={`form-group ${className}`}>
+			<label>{children}</label>
+			<input type={type} placeholder={placeholder} className={className} />
 		</div>
-	)
+	);
 }
 
 export default InputData;
