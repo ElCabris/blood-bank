@@ -1,5 +1,8 @@
-from fastapi import APIRouter, HTTPException, status
+from typing import Optional
 
+from fastapi import APIRouter, HTTPException, Response, status
+
+from app.db.crud.create.create_bank import add_bank
 from app.db.crud.read.read_bank import get_bank
 from app.schemas.bank import Bank
 
@@ -14,6 +17,7 @@ async def get_bank_by_name(name: str):
         new_donor = Bank(
             id=bank.id,
             name=bank.name,
+            nit=bank.nit,
             email=bank.email,
             password=bank.password,
             phone_number=bank.phone_number,
@@ -22,3 +26,21 @@ async def get_bank_by_name(name: str):
 
         return new_donor
     return HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Bank not found")
+
+
+@bank_router.post("/bank", status_code=status.HTTP_201_CREATED)
+async def set_donor(
+    name: str,
+    nit: str,
+    email: str,
+    password: str,
+    phone_number: Optional[str] = None,
+    city: Optional[str] = None,
+):
+    result = add_bank(name, nit, email, password, phone_number, city)
+
+    if result is None:
+        return HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST, detail="Donor creation faild"
+        )
+    return Response(status_code=status.HTTP_201_CREATED)
