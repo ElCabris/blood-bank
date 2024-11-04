@@ -20,6 +20,7 @@ async def get_bank_by_name(name: str):
             nit=bank.nit,
             email=bank.email,
             password=bank.password,
+            addres=bank.addres,
             phone_number=bank.phone_number,
             city=bank.city,
         )
@@ -34,10 +35,11 @@ async def set_donor(
     nit: str,
     email: str,
     password: str,
+    addres: str,
     phone_number: Optional[str] = None,
     city: Optional[str] = None,
 ):
-    result = add_bank(name, nit, email, password, phone_number, city)
+    result = add_bank(name, nit, email, password, addres, phone_number, city)
 
     if result is None:
         return HTTPException(
