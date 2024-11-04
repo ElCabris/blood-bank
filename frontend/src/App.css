@@ -2,7 +2,7 @@
 
 .navbar {
   width: 100%;
-  background-color: #CC0000; /* Rojo principal */
+  background-color: #cc0000; /* Rojo principal */
   display: flex;
   justify-content: flex-end; /* Alinea los elementos al inicio */
   align-items: center; /* Centra verticalmente los elementos */
@@ -22,7 +22,7 @@
 }
 
 .navbar ul li a {
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   transition: text-decoration 0.3s;
@@ -30,9 +30,9 @@
   margin-right: 40px;
 }
 
-.navbar ul li a:hover{
+.navbar ul li a:hover {
   background-color: #ff6b81;
-  padding: 0.5rem; 
+  padding: 0.5rem;
   box-shadow: 0 2px 4px;
   border-radius: 8%;
 }

@@ -1,28 +1,27 @@
-.Modify{
-    margin: '20px'; 
-    padding: '80px'; 
-    max-width: '400px'; 
-    border: '1px solid #ccc'; 
-    border-radius: '10px';
+.Modify {
+  margin: '20px';
+  padding: '80px';
+  max-width: '400px';
+  border: '1px solid #ccc';
+  border-radius: '10px';
 }
-h3{
-    color: #a8a6a6;
+h3 {
+  color: #a8a6a6;
 }
 .btn-user {
-    background: none;
-    border: none;
-    padding: 0;
-    color: inherit;
-    font: inherit;
-    cursor: pointer;
-    font-size: 19px;
-    padding-right: 20px;
-  }
-  
-.btn-user:hover {
-    color: white;
-    background-color: #CC0000;
-    padding: 0.2rem; 
-    border-radius: 10%;
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  font-size: 19px;
+  padding-right: 20px;
 }
-  
+
+.btn-user:hover {
+  color: white;
+  background-color: #cc0000;
+  padding: 0.2rem;
+  border-radius: 10%;
+}

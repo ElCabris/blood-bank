@@ -1,15 +1,66 @@
+import React from 'react';
 import { Bar, Pie } from 'react-chartjs-2';
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, ArcElement, Tooltip, Legend } from 'chart.js';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  ArcElement,
+  Tooltip,
+  Legend,
+} from 'chart.js';
 // import './mystyles_estad.css';
-ChartJS.register(CategoryScale, LinearScale, BarElement, ArcElement, Tooltip, Legend);
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  ArcElement,
+  Tooltip,
+  Legend
+);
 
 // Simulación de la base de datos de donantes
 const donantesDB = [
-  { id: 1, nombre: 'Donante X', tipoSangre: 'A+', ubicacion: 'Ciudad1', edad: 25, enfermedadesPreexistentes: false },
-  { id: 2, nombre: 'Donante Y', tipoSangre: 'O-', ubicacion: 'Ciudad2', edad: 40, enfermedadesPreexistentes: true },
-  { id: 3, nombre: 'Donante Z', tipoSangre: 'B+', ubicacion: 'Ciudad1', edad: 30, enfermedadesPreexistentes: false },
-  { id: 4, nombre: 'Donante W', tipoSangre: 'O+', ubicacion: 'Ciudad3', edad: 45, enfermedadesPreexistentes: false },
-  { id: 5, nombre: 'Donante V', tipoSangre: 'AB-', ubicacion: 'Ciudad1', edad: 35, enfermedadesPreexistentes: true },
+  {
+    id: 1,
+    nombre: 'Donante X',
+    tipoSangre: 'A+',
+    ubicacion: 'Ciudad1',
+    edad: 25,
+    enfermedadesPreexistentes: false,
+  },
+  {
+    id: 2,
+    nombre: 'Donante Y',
+    tipoSangre: 'O-',
+    ubicacion: 'Ciudad2',
+    edad: 40,
+    enfermedadesPreexistentes: true,
+  },
+  {
+    id: 3,
+    nombre: 'Donante Z',
+    tipoSangre: 'B+',
+    ubicacion: 'Ciudad1',
+    edad: 30,
+    enfermedadesPreexistentes: false,
+  },
+  {
+    id: 4,
+    nombre: 'Donante W',
+    tipoSangre: 'O+',
+    ubicacion: 'Ciudad3',
+    edad: 45,
+    enfermedadesPreexistentes: false,
+  },
+  {
+    id: 5,
+    nombre: 'Donante V',
+    tipoSangre: 'AB-',
+    ubicacion: 'Ciudad1',
+    edad: 35,
+    enfermedadesPreexistentes: true,
+  },
   // Más donantes...
 ];
 
@@ -23,13 +74,21 @@ function Statistics() {
 
     return {
       labels: Object.keys(tiposSangre),
-      datasets: [{
-        label: 'Donantes por tipo de sangre',
-        data: Object.values(tiposSangre),
-        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'],
-        borderColor: '#fff',
-        borderWidth: 1,
-      }]
+      datasets: [
+        {
+          label: 'Donantes por tipo de sangre',
+          data: Object.values(tiposSangre),
+          backgroundColor: [
+            '#FF6384',
+            '#36A2EB',
+            '#FFCE56',
+            '#4BC0C0',
+            '#9966FF',
+          ],
+          borderColor: '#fff',
+          borderWidth: 1,
+        },
+      ],
     };
   };
 
@@ -41,19 +100,27 @@ function Statistics() {
 
     return {
       labels: Object.keys(ubicaciones),
-      datasets: [{
-        label: 'Donantes por ubicación',
-        data: Object.values(ubicaciones),
-        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'],
-        borderColor: '#fff',
-        borderWidth: 1,
-      }]
+      datasets: [
+        {
+          label: 'Donantes por ubicación',
+          data: Object.values(ubicaciones),
+          backgroundColor: [
+            '#FF6384',
+            '#36A2EB',
+            '#FFCE56',
+            '#4BC0C0',
+            '#9966FF',
+          ],
+          borderColor: '#fff',
+          borderWidth: 1,
+        },
+      ],
     };
   };
 
   const edadData = () => {
     const edades = [0, 0, 0, 0]; // Rango de edades: <20, 21-30, 31-40, 41+
-    donantesDB.forEach(donante => {
+    donantesDB.forEach((donante) => {
       if (donante.edad < 20) edades[0] += 1;
       else if (donante.edad <= 30) edades[1] += 1;
       else if (donante.edad <= 40) edades[2] += 1;
@@ -62,13 +129,15 @@ function Statistics() {
 
     return {
       labels: ['<20', '21-30', '31-40', '41+'],
-      datasets: [{
-        label: 'Donantes por rango de edad',
-        data: edades,
-        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
-        borderColor: '#fff',
-        borderWidth: 1,
-      }]
+      datasets: [
+        {
+          label: 'Donantes por rango de edad',
+          data: edades,
+          backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
+          borderColor: '#fff',
+          borderWidth: 1,
+        },
+      ],
     };
   };
 
@@ -84,13 +153,15 @@ function Statistics() {
 
     return {
       labels: Object.keys(enfermedades),
-      datasets: [{
-        label: 'Donantes con/sin enfermedades preexistentes',
-        data: Object.values(enfermedades),
-        backgroundColor: ['#FF6384', '#36A2EB'],
-        borderColor: '#fff',
-        borderWidth: 1,
-      }]
+      datasets: [
+        {
+          label: 'Donantes con/sin enfermedades preexistentes',
+          data: Object.values(enfermedades),
+          backgroundColor: ['#FF6384', '#36A2EB'],
+          borderColor: '#fff',
+          borderWidth: 1,
+        },
+      ],
     };
   };
 

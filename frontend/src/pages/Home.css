@@ -1,45 +1,43 @@
 .StepsDonation {
-    display: flex; 
-    justify-content: space-between; 
-    padding: 20px; 
-    flex: 1; /* Permite que los elementos crezcan y ocupen espacio */
-    flex-direction: row; /* Para alinear el contenido del paso en fila */
-    align-items: center; /* Centrar los íconos, títulos y párrafos */
-    height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex: 1; /* Permite que los elementos crezcan y ocupen espacio */
+  flex-direction: row; /* Para alinear el contenido del paso en fila */
+  align-items: center; /* Centrar los íconos, títulos y párrafos */
+  height: 100%;
 }
-.StepsDonation p{
-    margin-left: 20px; /* Espacio entre cada paso */
-    margin-right: 20px;
-    width: 280px;
+.StepsDonation p {
+  margin-left: 20px; /* Espacio entre cada paso */
+  margin-right: 20px;
+  width: 280px;
 }
-.StepsDonation h3{
-    text-align: center;
-    color: #ff6b81;
-    font-size: 27px;
+.StepsDonation h3 {
+  text-align: center;
+  color: #ff6b81;
+  font-size: 27px;
 }
 
 .StepsDonation img {
-    max-width: 100%; /* Asegurar que la imagen no desborde su contenedor */
-    height: 90px;
+  max-width: 100%; /* Asegurar que la imagen no desborde su contenedor */
+  height: 90px;
 }
 
 .PreguntasFrecuentes {
-    margin-top: 60px;
-    display: flex; /* Usamos flexbox para alinear los elementos */
-    justify-content: space-between; /* Espacio entre las columnas */
-    align-items: flex-start; /* Alinear los elementos hacia arriba */
+  margin-top: 60px;
+  display: flex; /* Usamos flexbox para alinear los elementos */
+  justify-content: space-between; /* Espacio entre las columnas */
+  align-items: flex-start; /* Alinear los elementos hacia arriba */
 }
 
 .PreguntasFrecuentes div {
-    flex: 1; /* Permitir que cada columna ocupe el mismo espacio */
-    margin-right: 5px; /* Espacio entre la columna de preguntas y la imagen */
+  flex: 1; /* Permitir que cada columna ocupe el mismo espacio */
+  margin-right: 5px; /* Espacio entre la columna de preguntas y la imagen */
 }
 
 .PreguntasFrecuentes img {
-    max-width: 100%; /* Asegurar que la imagen no desborde su contenedor */
-    height: auto; /* Mantener la relación de aspecto */
-    border-radius: 12%;
-    box-shadow: 0 2px 4px;
+  max-width: 100%; /* Asegurar que la imagen no desborde su contenedor */
+  height: auto; /* Mantener la relación de aspecto */
+  border-radius: 12%;
+  box-shadow: 0 2px 4px;
 }
-
-
