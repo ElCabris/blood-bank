@@ -1,5 +1,5 @@
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
 
 .blood-bank-card {
   padding: 20px;
@@ -30,4 +30,3 @@
 .view-more-button:hover {
   background-color: #c9302c;
 }
-

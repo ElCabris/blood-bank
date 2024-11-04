@@ -49,4 +49,3 @@ const styles = {
 };
 
 export default Message;
-

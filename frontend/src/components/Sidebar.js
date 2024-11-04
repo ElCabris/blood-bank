@@ -13,7 +13,8 @@ const Sidebar = ({ users, selectUser, selectedUser }) => {
             onClick={() => selectUser(user)}
             style={{
               ...styles.userItem,
-              backgroundColor: selectedUser?.id === user.id ? '#e0e0e0' : 'transparent',
+              backgroundColor:
+                selectedUser?.id === user.id ? '#e0e0e0' : 'transparent',
             }}
           >
             <img src={user.avatar} alt={user.name} style={styles.avatar} />
@@ -54,4 +55,3 @@ const styles = {
 };
 
 export default Sidebar;
-

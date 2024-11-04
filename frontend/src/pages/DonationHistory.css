@@ -10,7 +10,8 @@
   margin-top: 20px;
 }
 
-.history-table th, .history-table td {
+.history-table th,
+.history-table td {
   padding: 10px;
   text-align: left;
   border-bottom: 1px solid #ddd;
@@ -32,4 +33,3 @@
 .download-button:hover {
   background-color: #4cae4c;
 }
-

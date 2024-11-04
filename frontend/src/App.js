@@ -1,38 +1,59 @@
+import React from 'react';
 import './App.css';
 import './App_mod.css';
-import { BrowserRouter as Router, Routes, Route, NavLink, useLocation } from "react-router-dom";
-import RegisterBank from "./pages/RegisterBank";
-import RegisterDonor from "./pages/RegisterDonor";
-import Login from "./pages/Login";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  NavLink,
+  useLocation,
+} from 'react-router-dom';
+import RegisterBank from './pages/RegisterBank';
+import RegisterDonor from './pages/RegisterDonor';
+import Login from './pages/Login';
 import Home from './pages/Home';
 import DonorHome from './pages/DonorHome';
 import BankHome from './pages/BankHome';
 import HealthForm from './pages/healtforms';
 function Navbar() {
   return (
-    <nav className='navbar'>
+    <nav className="navbar">
       <ul>
-      <li>
-          <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
-          </NavLink>
+        <li>
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          ></NavLink>
         </li>
         <li>
-          <NavLink to="/blood-bank" className={({ isActive }) => isActive ? 'active' : ''}>
+          <NavLink
+            to="/blood-bank"
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
             Inicio
           </NavLink>
         </li>
         <li>
-          <NavLink to="/login" className={({ isActive }) => isActive ? 'active' : ''}>
+          <NavLink
+            to="/login"
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
             Iniciar Sesión
           </NavLink>
         </li>
         <li>
-          <NavLink to="/register/bank" className={({ isActive }) => isActive ? 'active' : ''}>
+          <NavLink
+            to="/register/bank"
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
             Registrar Banco
           </NavLink>
         </li>
         <li>
-          <NavLink to="/register/donor" className={({ isActive }) => isActive ? 'active' : ''}>
+          <NavLink
+            to="/register/donor"
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
             Registrar Donante
           </NavLink>
         </li>
@@ -41,34 +62,47 @@ function Navbar() {
   );
 }
 
-function NavarModif(){
-	return (
-		<nav className='navbar_modif'>
-			<ul>
-				<li>
-					<NavLink to="/blood-bank" className={({ isActive }) => isActive ? 'active' : ''}>
-            		Inicio
-          			</NavLink>
-				</li>
-			</ul>
-		</nav>
-	);
+function NavarModif() {
+  return (
+    <nav className="navbar_modif">
+      <ul>
+        <li>
+          <NavLink
+            to="/blood-bank"
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            Inicio
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
+  );
 }
 
 function App() {
   const location = useLocation();
 
   // Lista de rutas donde quieres mostrar el navbar
-  const routesWithNavbar = ['/','/blood-bank', '/login', '/register/bank', '/register/donor'];
+  const routesWithNavbar = [
+    '/',
+    '/blood-bank',
+    '/login',
+    '/register/bank',
+    '/register/donor',
+  ];
 
   return (
     <div>
       {/* Mostrar el navbar solo en las rutas especificadas */}
-      {routesWithNavbar.includes(location.pathname) ? <Navbar /> : <NavarModif />}
+      {routesWithNavbar.includes(location.pathname) ? (
+        <Navbar />
+      ) : (
+        <NavarModif />
+      )}
 
       <div className="main-content">
         <Routes>
-        <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/blood-bank" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/donor" element={<DonorHome />} />

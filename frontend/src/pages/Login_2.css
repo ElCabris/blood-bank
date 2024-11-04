@@ -42,20 +42,23 @@ label {
 
 /* Estilos para campos de entrada de tamaño uniforme */
 .input-container input,
-.input-container select, 
-.form-group select  {
-  width: 100%;           /* Ocupa todo el ancho del contenedor */
-  height: 45px;          /* Altura fija para todos los campos */
-  padding: 12px 15px;    /* Espaciado interno */
+.input-container select,
+.form-group select {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 45px; /* Altura fija para todos los campos */
+  padding: 12px 15px; /* Espaciado interno */
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
   outline: none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
   box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
 }
 
-input:focus, select:focus {
+input:focus,
+select:focus {
   border-color: #ff6b81;
   box-shadow: 0 0 8px rgba(255, 107, 129, 0.3);
 }
@@ -75,7 +78,7 @@ input:focus, select:focus {
 }
 
 button:hover {
-  background-color: #CC0000;
+  background-color: #cc0000;
 }
 
 button:active {
