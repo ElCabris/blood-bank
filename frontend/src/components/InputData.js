@@ -5,6 +5,7 @@ function InputData({
   placeholder,
   children,
   className,
+  value,
   onChange = () => {},
 }) {
   return (
@@ -14,6 +15,7 @@ function InputData({
         type={type}
         placeholder={placeholder}
         className={className}
+        {...(value !== undefined && value !== null ? { value } : {})}
         onChange={onChange}
       />
     </div>
