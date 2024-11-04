@@ -12,6 +12,7 @@ class Bank(Base):
     nit = Column(String, unique=True, nullable=False)
     email = Column(String, nullable=False)
     password = Column(String, nullable=False)
+    addres = Column(String, nullable=False)
 
     phone_number = Column(String, nullable=True)
     city = Column(String, nullable=True)

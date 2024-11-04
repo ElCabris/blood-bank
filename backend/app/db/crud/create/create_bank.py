@@ -12,6 +12,7 @@ def add_bank(
     nit: str,
     email: str,
     password: str,
+    addres: str,
     phone_number: Optional[str] = None,
     city: Optional[str] = None,
 ) -> Optional[int]:
@@ -23,6 +24,7 @@ def add_bank(
                 nit=nit,
                 email=email,
                 password=password,
+                addres=addres,
                 phone_number=phone_number,
                 city=city,
             )
